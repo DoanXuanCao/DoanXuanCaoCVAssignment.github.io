@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Đoàn Xuân Cao for web development and Java projects.">
+    <title>Contact | Đoàn Xuân Cao - Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">DXC.</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-btn" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="margin-bottom: 10px; font-size: 2.5rem;">Get in Touch</h1>
+        <p style="margin-bottom: 40px; font-size: 1.1rem; color: var(--text-secondary);">Fill out the form below to discuss project opportunities or collaborations.</p>
+
+        <form action="#" method="POST" id="contactForm" style="max-width: 900px;">
+            <input type="hidden" name="form_id" value="portfolio_contact_2026">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Ex: John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddr">Email Address</label>
+                        <input type="email" id="emailAddr" name="emailAddr" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNum">Phone Number (Format: 09xx-xxx-xxx)</label>
+                        <input type="tel" id="phoneNum" name="phoneNum" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required title="Format must be exactly 09xx-xxx-xxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="accessCode">Client Access Password</label>
+                        <input type="password" id="accessCode" name="accessCode" placeholder="Optional portal code">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Project Details</legend>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="budget">Estimated Budget ($100 - $10,000)</label>
+                        <input type="number" id="budget" name="budget" min="100" max="10000" step="50" required placeholder="500">
+                    </div>
+                    <div class="form-group">
+                        <label for="deadline">Expected Deadline</label>
+                        <input type="date" id="deadline" name="deadline" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="priority">Priority Level (1-10)</label>
+                        <input type="range" id="priority" name="priority" min="1" max="10" value="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="brandColor">Brand Color Theme</label>
+                        <input type="color" id="brandColor" name="brandColor" value="#3182ce" style="height: 50px; width: 100%; cursor: pointer;">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceType">Service Required</label>
+                    <select id="serviceType" name="serviceType" required>
+                        <option value="">-- Please select a service --</option>
+                        <optgroup label="Web Development">
+                            <option value="frontend">Frontend (HTML/CSS/JS)</option>
+                            <option value="backend">Backend (Java/Spring Boot)</option>
+                        </optgroup>
+                        <optgroup label="Other IT Services">
+                            <option value="database">Database Management (SQL)</option>
+                            <option value="consulting">IT Architecture Consulting</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sourceInfo">How did you hear about me?</label>
+                    <input list="sourceOptions" id="sourceInfo" name="sourceInfo" required placeholder="Type or select an option">
+                    <datalist id="sourceOptions">
+                        <option value="GitHub Profile">
+                        <option value="HCMIU Network">
+                        <option value="LinkedIn">
+                        <option value="Google Search">
+                    </datalist>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectBrief">Upload Project Brief (.pdf, .docx)</label>
+                    <input type="file" id="projectBrief" name="projectBrief" accept=".pdf,.doc,.docx" style="padding: 9px;">
+                </div>
+
+                <div class="form-group">
+                    <label for="messageBody">Detailed Message</label>
+                    <textarea id="messageBody" name="messageBody" rows="6" required placeholder="Describe your project requirements here..."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Communication Preferences</legend>
+                <div style="margin-bottom: 15px;">
+                    <span style="font-weight: 600; color: var(--text-primary); display: block; margin-bottom: 8px;">Preferred Contact Method:</span>
+                    <label style="font-weight: normal; margin-right: 20px; cursor: pointer;">
+                        <input type="radio" name="contactPref" value="email" checked> Email
+                    </label>
+                    <label style="font-weight: normal; cursor: pointer;">
+                        <input type="radio" name="contactPref" value="phone"> Phone Call
+                    </label>
+                </div>
+                <div>
+                    <label style="font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" name="newsletter" value="subscribe"> Subscribe to my tech blog newsletter
+                    </label>
+                </div>
+            </fieldset>
+
+            <div style="display: flex; gap: 15px; margin-top: 30px;">
+                <button type="submit" class="btn" style="padding: 12px 30px; font-size: 1.1rem;">Submit Request</button>
+                <button type="reset" class="btn" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color);">Reset Form</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 20px 0; border-top: 1px solid var(--border-color); color: var(--text-secondary); margin-top: 50px;">
+            <p>&copy; 2026 Đoàn Xuân Cao. All rights reserved.</p>
+            <p><small><a href="policy.html" style="color: var(--text-secondary);">Privacy Policy & Terms</a></small></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

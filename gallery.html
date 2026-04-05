@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo gallery showcasing projects and activities.">
+    <title>Gallery | Đoàn Xuân Cao - Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">DXC.</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-btn" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="margin-bottom: 10px; font-size: 2.5rem;">Image Gallery</h1>
+        <p style="margin-bottom: 40px; color: var(--text-secondary);">A visual collection of my academic projects, coding setups, and activities.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+            <figure style="margin: 0;">
+                <img src="assets/img/gallery1.webp" alt="Coding the Hotel Management System interface" style="width: 100%; height: 250px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow);">
+            </figure>
+            
+            <figure style="margin: 0;">
+                <img src="assets/img/gallery3.webp" alt="Spring Boot architecture diagram" style="width: 100%; height: 250px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow);">
+            </figure>
+
+            <figure style="margin: 0;">
+                <img src="assets/img/gallery4.webp" alt="Completing the Deep Learning Specialization course" style="width: 100%; height: 250px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow);">
+            </figure>
+
+            <figure style="margin: 0;">
+                <img src="assets/img/gallery5.webp" alt="Database schema design for the mentoring platform" style="width: 100%; height: 250px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow);">
+            </figure>
+
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 20px 0; border-top: 1px solid var(--border-color); color: var(--text-secondary);">
+            <p>© 2026 Đoàn Xuân Cao. All rights reserved.</p>
+            <p><small><a href="policy.html" style="color: var(--text-secondary);">Privacy Policy & Terms</a></small></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
